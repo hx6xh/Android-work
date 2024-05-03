@@ -54,20 +54,13 @@ class AddLogFragment : Fragment() {
             val selectedDate =
                 SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(currentCalendar.time)
             val event = editTextEvent.text.toString().trim()
-
-            val tLog = TLog(selectedDate,event)
-            TLogDao.insertLog(tLog)
-            findNavController().popBackStack()
-/*            if (event.isNotEmpty()) {
-                val logEntry = LogEntry(selectedDate, event)
-                onLogAddedListener?.let { listener ->
-                    listener.onLogAdded(logEntry)
-                    listener.onAddLogFinished()
-                }
+            if (event.isNotEmpty()) {
+                val tLog = TLog(selectedDate,event)
+                TLogDao.insertLog(tLog)
+                findNavController().popBackStack()
             } else {
                 editTextEvent.error = "请输入事件"
-            }*/
-
+            }
         }
     }
 }
