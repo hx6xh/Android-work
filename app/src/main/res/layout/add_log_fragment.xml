@@ -1,0 +1,28 @@
+<!-- add_log.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/addLogFragment">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"/>
+
+    <EditText
+        android:id="@+id/editTextEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入事件"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/btnAddLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新增日志"/>
+
+</LinearLayout>

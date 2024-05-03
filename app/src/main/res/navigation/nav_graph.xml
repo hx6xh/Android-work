@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- nav_graph.xml -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.hx.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/test_main_container">
+        <action
+            android:id="@+id/action_mainFragment_to_addLogFragment"
+            app:destination="@id/addLogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLogFragment"
+        android:name="com.example.hx.AddLogFragment"
+        android:label="AddLogFragment"
+        tools:layout="@layout/add_log_fragment">
+        <action
+            android:id="@+id/action_addLogFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

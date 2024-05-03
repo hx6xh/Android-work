@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下状态 -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#CCCCCC" />
+            <stroke android:color="#FF0000" />
+        </shape>
+    </item>
+    <!-- 默认状态 -->
+    <item tools:ignore="StateListReachable">
+        <shape android:shape="rectangle">
+            <solid android:color="#CCCCCC" />
+        </shape>
+    </item>
+
+</selector>
