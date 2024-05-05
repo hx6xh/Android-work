@@ -25,7 +25,5 @@ class DatabaseManager(private val appContext: Context) {
     val tLogDao: TLogDao
         get() = database.TLogDao()
     fun deleteLogEntry(logId:Long) {
-        // 使用Room或其他数据库框架执行删除操作
-        // 例如，如果使用Room:
         tLogDao.deleteLog(logId) }
 }
