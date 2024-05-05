@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TestMain"
+            android:label="@string/dialog"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -75,7 +75,7 @@ class MainFragment : Fragment(){
                 val position = viewHolder.adapterPosition
                 val logId = (recyclerView.adapter as? LogAdapter)?.getItemId(position) // 获取被滑动条目的ID
                 AlertDialog.Builder(requireContext())
-                    .setMessage("确定要删除这条事件吗？ $logId")
+                    .setMessage("确定要删除这条事件吗？")
                     .setPositiveButton("确定") { _, _ ->
                         tLogDao.deleteLog(logId)
                         val updatedLogs = tLogDao.queryAllLogs() // 重新查询数据

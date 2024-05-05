@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">HX</string>
     <string name="one">11111</string>
+    <string name="dialog">日志</string>
 </resources>
