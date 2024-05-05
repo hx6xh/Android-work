@@ -50,14 +50,13 @@ class MainFragment : Fragment(){
             findNavController().navigate(R.id.addLogFragment)
         }
         val db = Room.databaseBuilder(requireContext(), TLogDatabase::class.java, "events_log")
-            .allowMainThreadQueries() // 注意：在主线程查询仅用于示例，实际应用中应避免
+            .allowMainThreadQueries()
             .fallbackToDestructiveMigration()
             .build()
 
         val tLogDao = db.TLogDao()
 
-        // 直接从 Dao 获取数据并更新 Adapter
-        GlobalScope.launch { // 使用协程在后台线程执行数据库操作
+        GlobalScope.launch { 
             val allLogs = tLogDao.queryAllLogs()
             val logEntries = allLogs.map { tLogToLogEntry(it) }
             withContext(Dispatchers.Main) { // 切换到主线程更新UI
